@@ -1,7 +1,7 @@
 Bookmarks (in progress)
 =========
 
-**WARNING: I've only just started building and testing this, so don't fork yet **
+***I've only just started building and testing this, so don't fork yet***
 
 This will be a tool to create and host your own bookmarks, built in Jekyll.
 
