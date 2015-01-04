@@ -1,0 +1,15 @@
+# Site settings
+title: Bookmarks
+description: A collaborative bookmark site
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+
+collections:
+  bookmarks:
+    output: true
+
+sass:
+  sass_dir: _sass
+  style: compressed

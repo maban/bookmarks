@@ -1,0 +1,375 @@
+body {
+  background-color: #363942;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+header {
+  margin-top: $spacing-unit*2.5;
+}
+
+main {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
+  @extend %clearfix;
+}
+
+.nav {
+  position: fixed;
+  bottom: 0;
+  width: 95%;
+  padding: 1em 2.5%;
+  background-color: rgba(255,255,255,0.8);
+  z-index: 1;
+  left: 0;
+  text-align: right;
+  font-size: 0.8em;
+  top: 0;
+  position: absolute;
+  bottom: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.nav-items {
+  margin: 0;
+}
+
+.nav-item {
+  float: right;
+  list-style-type: none;
+  font-size: 1.1em;
+}
+
+.nav-item a {
+  padding: 0.8em 1em 0.7em;
+  display: block;
+  border-bottom: 5px solid transparent;
+  &:hover {
+    border-bottom: 5px solid #419DD2;
+  }
+}
+
+.title {
+  font-size: 1.8em;
+  text-align: center;
+  margin: 0 0 $spacing-unit;
+}
+
+p {
+    font-size: 15px;
+}
+
+section {
+    clear: both;
+}
+
+
+
+.small {
+    font-size: 0.85em;
+}
+
+.hidden {
+    /* technique via http://webaim.org/techniques/css/invisiblecontent/ */
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.bookmarks {
+    list-style-type: none;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+.bookmark {
+    margin: 0 0 20px 0;
+    font-size: 15px;
+    box-shadow: 0 0 1px rgba(0,0,0,0.3);
+    transition: 0.2s;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bookmark-tags {
+    background-color: #419DD2;
+    margin: 0;
+    padding: 3px 20px;
+    li {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: normal;
+        line-height: 1;
+        text-transform: uppercase;
+        color: #fff;
+    }
+}
+
+.bookmark-description {
+    background-color: #fff;
+    padding: 15px 20px 15px;
+    display: block;
+    color: #333;
+    text-decoration: none;
+
+}
+
+.bookmark-description > *:last-child {
+    margin-bottom: 0;
+}
+
+.bookmark-url {
+    display: block;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.bookmark-title {
+    margin-bottom: 5px;
+    font-size: 22px;
+    line-height: 24px;
+}
+
+.bookmark-author,
+.bookmark-publisher,
+.bookmark-language {
+    margin: 0;
+}
+
+.bookmark-type-article .bookmark-url,
+.bookmark-type-book .bookmark-url,
+.bookmark-type-example .bookmark-url,
+.bookmark-type-talk .bookmark-url,
+.bookmark-type-tool .bookmark-url,
+.bookmark-type-podcast .bookmark-url,
+.bookmark-type-guide .bookmark-url,
+.bookmark-type-tool .bookmark-add {
+    padding-top: 35px;
+    border-radius: 3px;
+    background-size: 21px;
+    background-position: 98% 8px;
+    background-repeat: no-repeat;
+}
+
+
+.bookmark-type-article .bookmark-url {
+    background-color: #9DEAA1;
+    background-image: url("/images/icons/article/article.png");
+    background-image: url("/images/icons/article/article.svg");
+    background-size: 23px;
+    background-position: 98% 6px;
+    &:hover,
+    &:focus {
+        background-color: #7BD880;
+    }
+}
+
+.bookmark-type-book .bookmark-url {
+    background-color: #E4DD97;
+    background-image: url("/images/icons/book/book.png");
+    background-image: url("/images/icons/book/book.svg");
+    background-size: 17px;
+    background-position: 98% 6px;
+    &:hover,
+    &:focus {
+        background-color: #E2D76D;
+    }
+}
+
+.bookmark-type-example .bookmark-url {
+    background-color: #80e5e5;
+    background-image: url("/images/icons/website/website.png");
+    background-image: url("/images/icons/website/website.svg");
+    background-size: 34px;
+    background-position: 98% 1px;
+    &:hover,
+    &:focus {
+        background-color: #50C8C8;
+    }
+}
+
+.bookmark-type-guide .bookmark-url {
+    background-color: #A3C0F5;
+    background-image: url("/images/icons/glasses/glasses.png");
+    background-image: url("/images/icons/glasses/glasses.svg");
+    background-size: 37px;
+    background-position: 98% 13px;
+    &:hover,
+    &:focus {
+        background-color: #75A1F0;
+    }
+}
+
+.bookmark-type-talk .bookmark-url {
+    background-color: #EFB7D3;
+    background-image: url("/images/icons/presentation/presentation.png");
+    background-image: url("/images/icons/presentation/presentation.svg");
+    background-size: 29px;
+    background-position: 98% 4px;
+    &:hover,
+    &:focus {
+        background-color: #EFA0C8;
+    }
+}
+
+.bookmark-type-tool .bookmark-url {
+    background-color: #C0B8EF;
+    background-image: url("/images/icons/wrench/wrench.png");
+    background-image: url("/images/icons/wrench/wrench.svg");
+    background-size: 22px;
+    background-position: 98% 7px;
+    &:hover,
+    &:focus {
+        background-color: #958CCB;
+    }
+}
+
+.bookmark-type-podcast .bookmark-url {
+    background-color: #F4CB94;
+    background-image: url("/images/icons/podcast/podcast.png");
+    background-image: url("/images/icons/podcast/podcast.svg");
+    background-size: 22px;
+    background-position: 98% 7px;
+    &:hover,
+    &:focus {
+        background-color: #E0AC65;
+    }
+}
+
+.bookmarks .bookmark-add {
+    //opacity: 0.55;
+    max-width: 250px;
+    padding-top: 0;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+    &:hover,
+    &:focus {
+        //opacity: 1;
+        -moz-transform: none;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.bookmark-add .bookmark-url {
+    padding-top: 0;
+}
+
+.bookmark-add .bookmark-title {
+    background-image: url("/images/icons/add/add.png");
+    background-image: url("/images/icons/add/add.svg");
+    background-image: url("/images/icons/add/add.svg");
+    background-size: 22px;
+    background-repeat: no-repeat;
+    background-position: 0px 10px;
+    padding: 10px 0 10px 32px;
+}
+
+.recommended:before {
+    content: "★";
+    position: absolute;
+    top: -1px;
+    left: 18px;
+    font-size: 13px;
+    background-color: #FAF97B;
+    padding: 3px 6px;
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 0 1px rgba(0,0,0,0.4),
+                0px 1px 0px rgba(0,0,0,0.2);
+}
+
+@media (min-width: 600px) {
+    .bookmarks {
+        float: left;
+        clear: both;
+        width: 100%;
+    }
+
+    // Set 2-column config
+
+    .bookmark {
+        float: left;
+        width: 48%;
+        margin-right: 4%;
+    }
+
+    .bookmark:nth-child(odd) {
+        clear: left;
+    }
+
+    .bookmark:nth-child(even) {
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 1000px) {
+
+    .bookmark {
+        float: left;
+        width: 32%;
+        margin-right: 2%;
+    }
+
+    // Undo 2-column config
+
+    .bookmark:nth-child(odd) {
+        clear: none;
+    }
+
+    .bookmark:nth-child(even) {
+        margin-right: 2%;
+    }
+
+    // Set 3-column config
+
+    .bookmark:nth-child(3n+1) {
+        clear: left;
+    }
+
+    .bookmark:nth-child(3n+3) {
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 1500px) {
+
+    .bookmark {
+        float: left;
+        width: 23%;
+        margin-right: 2.6666%;
+    }
+
+    // Undo 2-column config
+
+    .bookmark:nth-child(even) {
+        margin-right: 2.6666%;
+    }
+
+    // Undo 3-column config
+
+    .bookmark:nth-child(3n+1) {
+        clear: none;
+    }
+
+    .bookmark:nth-child(3n+3) {
+        margin-right: 2.6666%;
+    }
+
+    // Set 4-column config
+
+    .bookmark:nth-child(4n+1) {
+        clear: left;
+    }
+
+    .bookmark:nth-child(4n+4) {
+        margin-right: 0;
+    }
+}

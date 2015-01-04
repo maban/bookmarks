@@ -1,0 +1,30 @@
+{% for bookmark in site.bookmarks %}
+<li class="bookmark {{ bookmark.status }}">
+  <span class="bookmark-description">
+    <a href="{{ bookmark.link }}" class="bookmark-url">
+        {% if page.type != "home" %}
+            {% if bookmark.image %}<img src="/images/screenshots/{{ bookmark.image }}" alt="{{ bookmark.title }}"/>{% endif %}
+        {% elsif bookmark.status == "recommended" %}
+            {% if bookmark.image %}<img src="/images/screenshots/{{ bookmark.image }}" alt="{{ bookmark.title }}"/>{% endif %}
+        {% endif %}
+        <h2 class="bookmark-title">{{ bookmark.title }}</h2>
+    </a>
+
+    {{ bookmark.content }}
+
+    {% if bookmark.author %}<p class="bookmark-author">{{ bookmark.author }}</p>{% endif %}
+
+    {% if bookmark.site %}<p class="bookmark-site">{{ bookmark.site }}</p>{% endif %}
+
+  </span>
+
+  {% if bookmark.tags %}
+  <ul class="bookmark-tags">
+    {% for tags in bookmark.tags %}
+    <li>{{ tags }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+</li>
+{% endfor %}
