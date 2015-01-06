@@ -1,3 +1,103 @@
+$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$color-text:       #111;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+
+
+/* Reset some basic elements */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* Basic styling */
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-weight: 300;
+  color: $color-text;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+
+/* Set `margin-bottom` to maintain vertical rhythm */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+  margin-bottom: $spacing-unit / 2;
+}
+
+
+
+/* Images */
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+
+/* Lists */
+ul, ol {
+  margin-left: $spacing-unit;
+}
+
+li {
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
+
+
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+
+
+
+/* Links */
+a {
+  color: #419DD2;
+  text-decoration: none;
+
+  &:visited {
+    color: darken(#419DD2, 15%);
+  }
+
+  &:hover {
+    color: $color-text;
+    text-decoration: underline;
+  }
+}
+
+/* Clearfix */
+%clearfix {
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
 body {
   background-color: #363942;
   margin: 0;
